@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="a page that recommends what clothes to wear depending on the weather">
+        <meta name="keywords" content="Weather, clothes, temperature">
+        <meta name="author" content="Victor Radelytskyi">
+        <meta name="theme-color" content="#dcdcdc">
+        <link rel="stylesheet" href="/static/css/general.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header-section">
+                <nav class="nav">
+                    <div class="nav-menu-cont">
+                        <ul class="nav-menu-list">
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/recommendations">Recommendations</a></li>
+                            <li><a href="/feedback">Feedback</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="main-content">
+            <section class="content-section">
+                <div class="section-introduction">
+                    <h2>Don't know what to wear?</h2>
+                    <h4 class="introduction-desc">Let's see if we can help</h4>
+                </div>
+                <div class="section-main-info">
+                    <h4 class="brief-comment">Hmmm, today looks rather 
+                        {{if gt .Main.Temperature .HotColdThreshold}} 
+                        hot</h4>
+                        <h5>What do you think of...</h5>
+                        <div style="text-align: center;">
+                            <img src="/static/img/hot_recommendations.png" alt="What to wear in hot weather" height="500px" width="auto">
+                        </div>
+                        {{else}}
+                        cold</h4>
+                        <h5>What do you think of...</h5>
+                        <div style="text-align: center;">
+                            <img src="/static/img/cold_recommendations.jpg" alt="What to wear in cold weather" height="500px" width="auto">
+                        </div>
+                        {{end}}
+                </div>
+                <div class="section-summary">
+                    <h5>Hope this helps!</h5>
+                    <h5>We would like to hear your <a href="/feedback">opinion</a> on quality of our recommendations!</h5>
+                </div>
+            </section>
+        </div>
+        <footer class="footer">
+            <div class="footer-section">
+                <h4>Victor Radelytskyi</h4>
+                <a href="#">About</a>
+                <a href="#">Message me</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow me</h4>
+                <a href="#">GitHub</a>
+                <a href="#">YouTube</a>
+            </div>
+        </footer>
+    </body>
+</html>

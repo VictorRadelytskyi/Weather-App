@@ -1,0 +1,16 @@
+.form-group{
+    padding: 0.5rem;
+    margin: 0.25rem auto;
+}
+
+textarea{
+    display: block;
+}
+
+input[type="submit"] {
+    display: block;
+    background-color: lightblue;
+    width: 150px;
+    height: 50px;
+}
+

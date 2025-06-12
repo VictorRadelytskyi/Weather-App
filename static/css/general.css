@@ -1,0 +1,163 @@
+html {
+    background-color: #dcdcdc;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; 
+}
+
+h1, h2, h3 {
+    margin-top: 1.5rem;
+}
+
+p{
+    margin-bottom: 1rem;
+}
+
+.main-content {
+    background: white;
+    padding: 2rem;
+    margin: 1rem auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    color: #eee; 
+    background-color: #111;
+    border-radius: 4px;
+}
+
+.header-section {
+    display: flex;
+    flex: 1;
+    background-color: #555555;
+    padding: 0 auto;
+}
+
+.nav {
+    width: 100%;
+}
+
+
+.nav-menu-list{
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* make all direct children of nav-menu-list class have the same length with flex: 1 */
+.nav-menu-list > *{
+    flex: 1;
+    color: #aaa;
+    text-align: center;
+}
+
+.nav-menu-list li {
+    background-color: #333;
+    transition: 0.2s;
+}
+
+.nav-menu-list a{
+    text-decoration: none;
+    color: #aaa;
+}
+
+.nav-menu-list a:hover {
+    color: white;
+    transition: 0.2s;
+}
+
+.section-introduction{
+    padding: 1rem;
+}
+
+.section-summary{
+    margin: 0.5rem;
+}
+
+.section-introduction h1, h2, h3{
+    text-align: center;
+    padding: 0.75rem;
+    margin: 0.5rem;
+}
+
+.introduction-desc{
+    padding: 0.25rem;
+    margin: 0.25rem;
+    text-align: center;
+}
+
+.brief-comment{
+    padding: 0.5rem;
+    margin: 0.25rem;
+}
+
+
+.weather-numbers-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.weather-numbers-cont p {
+    flex: 1;
+    padding: 1rem;
+    margin: 0.5rem;
+    background-color: #bbb;
+    text-align: center;
+}
+
+.flex-1{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-1 > * {
+    flex: 1;
+    text-align: center;
+}
+
+.default-borders {
+    padding: 0.75rem;
+    margin: 0.5rem;
+}
+
+.footer{
+    display: flex;
+    background-color: #111;
+    color: #eee;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.footer-section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+.footer-section a:hover{
+    color: white;
+    transition: 0.2s; 
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Weather</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page that shows the weather and provides recommendations of what to wear" >
+        <meta name="keywords" content="Weather, temperature, clothes">
+        <meta name="author" content="Victor Radelytskyi">
+        <meta name="theme-color" content="#dcdcdc">
+        <link rel="stylesheet" href="/static/css/general.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-section"> 
+                <nav class="nav">
+                    <div class="nav-menu-cont"> 
+                        <ul class="nav-menu-list">
+                            <li><a href="/home">Home</a></li>
+                            <li><a href="/recommendations">Recommendations</a></li>
+                            <li><a href="/feedback">Feedback</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <section class="content-section">
+                <div class="weather">
+                    <div class="section-introduction" style="text-align: center;">
+                        <h2>See current weather in Kraków, Poland!</h2>
+                        <img src="/static/img/main.png" alt="Cool weather image">
+                    </div>
+                    <div class="weather-data-cont section-main-info"> 
+                        <div class="weather-numbers-cont flex-1">
+                            <div class="temperature flex-1">
+                                <p>Temperature: {{.Main.Temperature}} K</p>
+                                <p>Feels like: {{.Main.FeelsLike}} K</p>
+                            </div>
+                            <div class="flex-1">
+                                <p>Humidity: {{.Main.Humidity}}</p>
+                                <p>Wind Speed: {{.Wind.Speed}}</p>
+                            </div>
+                        </div>
+                        <div class="weather-description brief-comment">
+                            {{if gt .Main.Temperature .HotColdThreshold}}
+                                <p>Today is rather hot..., right?</p>
+                            {{else}}
+                                <p>Today is rather cold..., right?</p>
+                            {{end}}
+                        </div>
+                    </div>
+                    <div class="section-summary">
+                        <h2>Don't know what to wear?</h2>
+                        <h4>No worries, we've got you! Check <a href="/recommendations">this</a> out🤗</h4>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+            <div class="footer-section">
+                <h4>Victor Radelytskyi</h4>
+                <a href="#">About</a>
+                <a href="#">Message me</a>
+            </div>
+            <div class="footer-section">
+                <h4>Follow me</h4>
+                <a href="#">GitHub</a>
+                <a href="#">YouTube</a>
+            </div>
+        </footer>
+    </body>
+</html>
